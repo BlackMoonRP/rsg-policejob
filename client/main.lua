@@ -146,6 +146,7 @@ RegisterNetEvent('police:client:policeAlert', function(coords, text)
         transG = transG - 1
         if transG == 0 then
             RemoveBlip(blip)
+            RemoveBlip(blip2)
             return
         end
     end
