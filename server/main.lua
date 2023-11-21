@@ -174,17 +174,6 @@ RSGCore.Commands.Add("jail", Lang:t("commands.jail_player"), {{name = "id", help
     end
 end)
 
-RSGCore.Commands.Add("unjail", Lang:t("commands.unjail_player"), {{name = "id", help = Lang:t('info.player_id')}}, true, function(source, args)
-    local src = source
-    local Player = RSGCore.Functions.GetPlayer(src)
-    if Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty then
-        local playerId = tonumber(args[1])
-        TriggerClientEvent("prison:client:UnjailPerson", playerId)
-    else
-        TriggerClientEvent('RSGCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
-    end
-end)
-
 RSGCore.Commands.Add("clearblood", Lang:t("commands.clearblood"), {}, false, function(source)
     local src = source
     local Player = RSGCore.Functions.GetPlayer(src)
