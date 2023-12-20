@@ -1,5 +1,6 @@
 # Rexshack Gaming Version
-module deactivated
+
+**This repository has been archived by the owner on Dec 20, 2023. It is now read-only.**
 
 # credits
 - original resouce created by : https://github.com/qbcore-redm-framework
